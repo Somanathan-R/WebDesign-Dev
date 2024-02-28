@@ -1,0 +1,23 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styling.css">
+    <title>Login Form </title>
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form">
+                <h2>JOB REGISTRATION FORM</h2>
+                <input type="email" required placeholder="Email" id="EMAIL" autocomplete="off" />
+                <input type="text" required placeholder="Username" id="user" autocomplete="off" />
+                <input type="number" required placeholder="9585354514" id="numb" autocomplete="off" />
+                <input oninput="return formvalid()" type="password" required placeholder="Password" id="pass" autocomplete="off" />
+                <span id="vaild-pass"></span>
+                <button type="submit">SIGN IN</button>
+                <p class="message"><a href="#">Forgot password?</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

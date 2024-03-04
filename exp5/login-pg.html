@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="main.js"></script>
+    <link href="new.css"rel="stylesheet">
+</head>
+<body>  
+    <div class="container" ng-controller="ctrl">
+    <h2>Login</h2>
+    <form>
+        <div class="name_id">
+            <label for="name">Username:</label>
+            <input type="text" id="name" ng-model="name">
+        </div>
+        <span class="error">{{nameError}}</span>
+        <div class="user">
+            <label for="uname">Email:</label>
+            <input type="text" id="uname" ng-model="email">
+        </div>
+        <span class="error">{{emailError}}</span>
+        <div class="pw">
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" ng-model="password">
+        </div>
+        <span class="error">{{passError}}</span>
+        <button ng-click="submitForm()">Submit</button>
+        <span class="success">{{successMsg}}</span>
+    </form></div>
+</body>
+</html>

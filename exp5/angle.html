@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body ng-controller="myctrl">
+    
+    <div class="wrapper">
+        First number <br>
+        <input type="text" ng-model="n1"><br>
+        Second number <br>
+        <input type="text" ng-model="n2"><br>
+
+        <input type="button" value="addition" ng-click="Calculate('+')">
+        <input type="button" value="subtraction" ng-click="Calculate('-')">
+        <input type="button" value="multiplication" ng-click="Calculate('*')">
+        <input type="button" value="division" ng-click="Calculate('/')">
+        <button ng-click="Calculate(op)"></button>
+        <h2>Result:{{ result }}</h2>  <br>
+    
+    </div>
+</body>
+</html>

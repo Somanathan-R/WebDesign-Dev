@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobiles List</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Mobiles List</h1>
+  <table id="mobilesTable">
+    <thead>
+      <tr>
+        <th>Model Number</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody id="mobilesTableBody"></tbody>
+  </table>
+
+  <script>
+    // AJAX request to fetch JSON data
+    function loaddata(){
+
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var mobiles = JSON.parse(this.responseText).mobiles;
+        displayMobiles(mobiles);
+      }
+    };
+    xhttp.open("GET", "new.json", true);
+    xhttp.send();}
+
+    // Function to display mobiles in the table
+    function displayMobiles(mobiles) {
+      var tableBody = document.getElementById("mobilesTableBody");
+
+      mobiles.forEach(function(mobile) {
+        var row = document.createElement("tr");
+        row.innerHTML = "<td>" + mobile.model_number + "</td>" +
+                        "<td>" + mobile.name + "</td>" +
+                        "<td>$" + mobile.price + "</td>" +
+                        "<td><img src='" + mobile.image + "' alt='" + mobile.name + "' height='50'></td>";
+        tableBody.appendChild(row);
+      });
+    }
+    
+  </script>
+ <button onclick="loaddata()">click</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<data>
+    <object type="car">
+        <brand>Toyota</brand>
+        <model>Corolla</model>
+        <year>2020</year>
+    </object>
+    <object type="mobile">
+        <brand>Apple</brand>
+        <model>iPhone 12</model>
+        <color>Black</color>
+    </object>
+    <object type="book">
+        <title>Harry Potter and the Philosopher's Stone</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+    </object>
+    <object type="voter">
+        <name>John Doe</name>
+        <age>30</age>
+        <location>New York</location>
+    </object>
+</data>
